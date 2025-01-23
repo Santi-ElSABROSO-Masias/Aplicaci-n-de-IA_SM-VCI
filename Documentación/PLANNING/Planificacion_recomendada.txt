@@ -1,0 +1,101 @@
+	1. Definición del propósito principal del proyecto
+		Pregunta general del proyecto:
+
+		¿Cómo la aplicación de inteligencia artificial influye en el control de inventarios de la empresa Servisol M&V S.A.C.?
+		Problemas específicos:
+
+		Actualizaciones de envío:
+			Optimizar el rastreo y registro de envíos en tiempo real dentro del control de inventarios.
+		Predicción de demanda:
+			Desarrollar modelos predictivos que anticipen necesidades de inventarios basados en datos históricos.
+			Objetivos generales:
+
+			Mejorar la eficiencia del control de inventarios mediante inteligencia artificial.
+			Reducir los errores humanos y el tiempo empleado en procesos manuales.
+		Objetivos específicos:
+
+			Automatizar el proceso de actualizaciones en tiempo real del inventario.
+			Implementar un modelo predictivo para anticipar demandas y evitar faltantes o excesos.
+			Reducir costos operativos optimizando el manejo de inventarios.
+	2. Actualizar las funcionalidades clave del sistema
+		Con base en los problemas específicos y el contexto de Servisol, el aplicativo deberá incluir:
+
+		Módulos principales
+		Gestión de inventarios:
+
+		Registro automatizado de entradas y salidas de inventario.
+		Integración con escáneres de código QR o de barras para la trazabilidad.
+		Actualizaciones de envío:
+
+		Sistema que registre y visualice en tiempo real el estado de los envíos.
+		Alertas automáticas para actualizaciones, retrasos, o errores en los envíos.
+		Predicción de demanda:
+
+		Modelos de IA para analizar patrones históricos de consumo.
+		Predicciones de productos necesarios según temporada, cliente, y localización.
+		Reportes y análisis:
+
+		Generación automática de reportes sobre niveles de inventario, patrones de consumo, y costos operativos.
+		Indicadores clave de rendimiento (KPIs) visibles en un panel.
+		Configuración y permisos:
+
+		Roles de usuario (administrador, operario, supervisor).
+		Acceso restringido según las necesidades de cada usuario.
+	3. Herramientas clave para el desarrollo
+		Lenguajes y frameworks:
+		Backend:
+		Python: Ideal para el desarrollo de la inteligencia artificial y lógica del servidor.
+		Framework: FastAPI (ligero y rápido) o Django (completo).
+		Frontend:
+		React Native: Para una aplicación móvil multiplataforma (Android e iOS).
+		React.js o Vue.js: Si decides también crear una interfaz web.
+		Bases de datos:
+		PostgreSQL: Para manejar datos estructurados del inventario.
+		Firebase: Como complemento para sincronización en tiempo real.
+		Modelos de IA:
+			Actualizaciones de envío:
+			Uso de un sistema basado en machine learning para detectar y anticipar retrasos o anomalías.
+			Herramientas: TensorFlow, PyTorch.
+			Predicción de demanda:
+			Modelos como ARIMA, Prophet (de Facebook), o redes neuronales recurrentes (RNN).
+			Gestión de proyectos:
+			Jira o Trello: Para gestionar las tareas y los sprints.
+			GitHub: Para control de versiones y colaboración.
+			Figma: Para prototipos de la interfaz.
+			Integraciones:
+			Google Maps API: Si es necesario geolocalizar envíos.
+			Twilio: Para enviar notificaciones por SMS o correo.
+
+	4. Metodología de desarrollo
+			Fase 1: Análisis
+				Recopila datos históricos de inventarios y envíos de Servisol.
+				Define los requerimientos funcionales con el equipo de la empresa.
+			Fase 2: Prototipado
+				Diseña un prototipo funcional (mockup) con herramientas como Figma.
+				Incluye las pantallas para las funcionalidades clave:
+				Registro de inventarios.
+				Actualizaciones de envío.
+				Predicciones de demanda.
+			Fase 3: Desarrollo (Enfoque MVP)
+				Sprint 1: Configuración del backend, base de datos, y sistema de autenticación.
+				Sprint 2: Implementación de la funcionalidad básica de registro y consulta de inventarios.
+				Sprint 3: Integración del módulo de actualizaciones en tiempo real.
+				Sprint 4: Entrenamiento y prueba del modelo predictivo.
+			Fase 4: Pruebas
+				Pruebas unitarias: Valida que cada módulo funcione individualmente.
+				Pruebas de integración: Asegúrate de que el sistema funcione de manera coordinada.
+				Pruebas con usuarios: Evalúa el uso real del sistema en Servisol.
+			Fase 5: Despliegue y monitoreo
+				Implementa el sistema en un entorno de producción usando Docker y un servicio en la nube (AWS, Azure, o Google Cloud).
+				Monitorea el rendimiento y recoge feedback para mejoras.
+	5. Línea de tiempo estimada
+		Mes 1: Análisis de requerimientos y diseño del prototipo.
+		Mes 2-3: Desarrollo del MVP (registro de inventarios y actualizaciones).
+		Mes 4: Implementación de la predicción de demanda.
+		Mes 5: Pruebas y mejoras basadas en feedback.
+		Mes 6: Despliegue y capacitación del personal.
+	6. Resultados esperados
+		Eficiencia: Reducción del tiempo invertido en actualizaciones manuales y errores de registro.
+		Ahorro: Menores costos operativos al optimizar la demanda de inventarios.
+		Control: Acceso en tiempo real a inventarios y predicciones confiables.
+		Satisfacción: Mejora en la toma de decisiones y la experiencia de los usuarios.
