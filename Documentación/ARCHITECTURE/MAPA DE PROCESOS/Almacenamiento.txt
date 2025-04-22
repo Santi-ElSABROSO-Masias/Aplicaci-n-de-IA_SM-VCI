@@ -2,28 +2,28 @@
 
 flowchart TB
     subgraph Entradas
-        E1["Equipos entregados con\ndocumentación completa"]
-        E2["Equipos o consumibles en\nóptimas condiciones físicas"]
+        E1["Equipos entregados con documentación completa"]
+        E2["Equipos o consumibles en óptimas condiciones físicas"]
     end
 
     subgraph "Personal Administrativo "
 
-        A1["1.Verificar equipos y documentos:\ncompletos, firmados y en condiciones."]
-        A2["2.¿El equipo está sucio o con problemas?\nSi es SÍ: Apartar para corrección."]
-        A3["3.Clasificar equipos por categoría:\nHerramientas, Equipos de uso medio,\nConsumibles, Equipos desmontados."]
-        A4["4.Colocar ítems en sectores asignados:\nA = Consumibles / Equipos de uso medio\nB = Equipos no de uso medio o desechables\nC = Herramientas\nD = Equipos desmontados o con futura salida."]
+        A1["1.Verificar equipos y documentos completos, firmados y en condiciones."]
+        A2["2.¿El equipo está sucio o con problemas? Si es SÍ: Apartar para corrección."]
+        A3["3.Clasificar equipos por categoría: Herramientas,Equipos de uso medio,Consumibles, Equipos desmontados."]
+        A4["4.Colocar ítems en sectores asignados: A = Consumibles / Equipos de uso medio B = Equipos no de uso medio o desechables C = Herramientas D = Equipos desmontados o con futura salida."]
         A5["5.Verificar almacenaje ordenado,\naccesible y con espacio optimizado."]
-        A6["6.Si la capacidad ≥ 50%, tomar\nfotografía de registro y archivar."]
+        A6["6.Si la capacidad ≥ 50%, tomar fotografía de registro y archivar."]
     end
 
     subgraph "Personal de Inventario"
-        PI1["Registrar ubicación física y\nclasificación en sistema."]
-        PI2["Confirmar sectores y control final\nantes de cierre."]
+        PI1["Registrar ubicación física y clasificación en sistema."]
+        PI2["Confirmar sectores y control final antes de cierre."]
     end
 
     subgraph Salidas
-        S1["Equipos organizados por\ncategoría y tipo."]
-        S2["Equipos almacenados correctamente\nen sector asignado (A, B, C, D)."]
+        S1["Equipos organizados por categoría y tipo."]
+        S2["Equipos almacenados correctamente en sector asignado (A, B, C, D)."]
         S3["Espacio físico optimizado y registrado."]
         S4["Fotografía archivada si capacidad ≥ 50%."]
     end

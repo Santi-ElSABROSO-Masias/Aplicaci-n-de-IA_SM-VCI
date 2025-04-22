@@ -7,21 +7,21 @@ flowchart TB
     end
 
     subgraph "Técnico de Campo"
-        A1["1.Notificar llegada\nde equipos"]
-        A3["3.Descargar elementos\nde las camionetas"]
+        A1["1.Notificar llegada de equipos"]
+        A3["3.Descargar elementos de las camionetas"]
     end
 
     subgraph "Personal Administrativo de Logística Interna"
-        A2["2.Preparar hoja de registro\no sistema de ingreso"]
-        A4["4.Verificar y registrar cada\nequipo o consumible entregado"]
-        A5["5.Anotar observaciones\n(daños, faltantes, anomalías)"]
-        A6["6.Confirmar y cerrar\nregistro de recepción"]
+        A2["2.Preparar hoja de registro o sistema de ingreso"]
+        A4["4.Verificar y registrar cada equipo o consumible entregado"]
+        A5["5.Anotar observaciones (daños, faltantes, anomalías)"]
+        A6["6.Confirmar y cerrar registro de recepción"]
     end
 
     subgraph Salidas
-        S1["Registro de recepción\ncompletado correctamente"]
-        S2["Equipos y consumibles\nverificados y almacenados"]
-        S3["Sin errores en la\ndocumentación"]
+        S1["Registro de recepción completado correctamente"]
+        S2["Equipos y consumibles verificados y almacenados"]
+        S3["Sin errores en la documentación"]
     end
 
     E1 --> A1
