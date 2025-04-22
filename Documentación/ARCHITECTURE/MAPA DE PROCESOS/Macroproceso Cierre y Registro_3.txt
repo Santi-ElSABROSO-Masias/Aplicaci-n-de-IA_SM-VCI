@@ -1,0 +1,36 @@
+flowchart TB
+    subgraph Objetivo
+        OBJ["Asegurar envío correcto y documentado de implementos y materiales, minimizando errores"]
+    end
+
+    subgraph Cierre_del_Despacho
+        E1["Registrar movimiento"] --> E2["Adjuntar documentación"]
+        E2 --> E3["Confirmar recepción"]
+    end
+    
+    subgraph Salidas
+        S1["Despacho realizado"]
+        S2["Registro del movimiento"]
+        S3["Evidencia del envío"]
+        S4["Notificación al destinatario"]
+    end
+    
+    subgraph Controles
+        PC1["Checklist y doble verificación"]
+    end
+    
+    E3 --> S1
+    E3 --> S2
+    E3 --> S3
+    E3 --> S4
+    PC1 --> E3
+    
+    classDef objetivo fill:#ffcccc,stroke:#cc0000,stroke-width:2px
+    classDef salidas fill:#a5f9c6,stroke:#00cc00,stroke-width:2px
+    classDef proceso fill:#bbdefb,stroke:#1976d2,stroke-width:2px
+    classDef control fill:#e6ccff,stroke:#6600cc,stroke-width:2px
+    
+    class OBJ objetivo
+    class S1,S2,S3,S4 salidas
+    class E1,E2,E3 proceso
+    class PC1 control

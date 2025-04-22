@@ -1,0 +1,54 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D87BF', 'primaryTextColor': '#fff', 'primaryBorderColor': '#4a6f99', 'lineColor': '#555', 'secondaryColor': '#73BF5D', 'tertiaryColor': '#F4F4F4' }}}%%
+
+flowchart TB
+    subgraph Entradas
+        E1["Equipos entregados con\ndocumentación completa"]
+        E2["Equipos o consumibles en\nóptimas condiciones físicas"]
+    end
+
+    subgraph "Personal Administrativo "
+
+        A1["1.Verificar equipos y documentos:\ncompletos, firmados y en condiciones."]
+        A2["2.¿El equipo está sucio o con problemas?\nSi es SÍ: Apartar para corrección."]
+        A3["3.Clasificar equipos por categoría:\nHerramientas, Equipos de uso medio,\nConsumibles, Equipos desmontados."]
+        A4["4.Colocar ítems en sectores asignados:\nA = Consumibles / Equipos de uso medio\nB = Equipos no de uso medio o desechables\nC = Herramientas\nD = Equipos desmontados o con futura salida."]
+        A5["5.Verificar almacenaje ordenado,\naccesible y con espacio optimizado."]
+        A6["6.Si la capacidad ≥ 50%, tomar\nfotografía de registro y archivar."]
+    end
+
+    subgraph "Personal de Inventario"
+        PI1["Registrar ubicación física y\nclasificación en sistema."]
+        PI2["Confirmar sectores y control final\nantes de cierre."]
+    end
+
+    subgraph Salidas
+        S1["Equipos organizados por\ncategoría y tipo."]
+        S2["Equipos almacenados correctamente\nen sector asignado (A, B, C, D)."]
+        S3["Espacio físico optimizado y registrado."]
+        S4["Fotografía archivada si capacidad ≥ 50%."]
+    end
+
+    E1 --> A1
+    E2 --> A1
+    A1 --> A2
+    A2 -- "Equipo no apto" --> E2
+    A2 -- "Equipo apto" --> A3
+    A3 --> A4
+    A4 --> PI1
+    PI1 --> PI2
+    PI2 --> A5
+    A5 --> A6
+    A6 --> S1
+    A6 --> S2
+    A6 --> S3
+    A6 --> S4
+
+    classDef entradas fill:#f9d6a5,stroke:#e69500,stroke-width:1px
+    classDef salidas fill:#a5f9c6,stroke:#00e676,stroke-width:1px
+    classDef admin fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+    classDef inventario fill:#d1c4e9,stroke:#7b52c7,stroke-width:1px
+
+    class E1,E2 entradas
+    class S1,S2,S3,S4 salidas
+    class A1,A2,A3,A4,A5,A6 admin
+    class PI1,PI2 inventario

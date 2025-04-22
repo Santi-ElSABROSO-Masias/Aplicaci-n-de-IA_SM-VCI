@@ -1,0 +1,35 @@
+flowchart TB
+    subgraph Entradas
+        E3["Materiales de embalaje"]
+        E4["Datos del destino"]
+    end
+
+    subgraph Ejecución_del_Despacho
+        C1["Recolectar ítems"] --> C2["Verificar con requerimiento"]
+        C2 --> C3["Embalar ítems"]
+        C3 --> C4["Etiquetar"]
+        C4 --> C5["Preparar documentación"]
+        C5 --> D1{"Tipo de entrega"}
+        D1 -->|Directa| D2["Entrega a técnico con firma"]
+        D1 -->|Encomienda| D3["Envío con registro fotográfico"]
+    end
+    
+    subgraph Controles
+        PC1["Checklist y doble verificación"]
+        PC3["Registro fotográfico (encomienda)"]
+    end
+    
+    E3 --> C3
+    E4 --> D1
+    PC1 --> C2
+    PC3 --> D3
+    
+    classDef entradas fill:#f9d6a5,stroke:#cc8500,stroke-width:2px
+    classDef proceso fill:#bbdefb,stroke:#1976d2,stroke-width:2px
+    classDef decision fill:#ffe6cc,stroke:#cc6600,stroke-width:2px
+    classDef control fill:#e6ccff,stroke:#6600cc,stroke-width:2px
+    
+    class E3,E4 entradas
+    class C1,C2,C3,C4,C5,D2,D3 proceso
+    class D1 decision
+    class PC1,PC3 control

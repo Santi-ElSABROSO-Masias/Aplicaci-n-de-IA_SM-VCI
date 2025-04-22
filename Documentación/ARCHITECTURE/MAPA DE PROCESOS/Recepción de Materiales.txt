@@ -1,0 +1,47 @@
+
+flowchart TB
+    subgraph Entradas
+        E1["Aviso de llegada de equipos"]
+        E2["Lista de equipos o consumibles entregados"]
+        E3["Formato de Registro de Recepción"]
+    end
+
+    subgraph "Técnico de Campo"
+        A1["1.Notificar llegada\nde equipos"]
+        A3["3.Descargar elementos\nde las camionetas"]
+    end
+
+    subgraph "Personal Administrativo de Logística Interna"
+        A2["2.Preparar hoja de registro\no sistema de ingreso"]
+        A4["4.Verificar y registrar cada\nequipo o consumible entregado"]
+        A5["5.Anotar observaciones\n(daños, faltantes, anomalías)"]
+        A6["6.Confirmar y cerrar\nregistro de recepción"]
+    end
+
+    subgraph Salidas
+        S1["Registro de recepción\ncompletado correctamente"]
+        S2["Equipos y consumibles\nverificados y almacenados"]
+        S3["Sin errores en la\ndocumentación"]
+    end
+
+    E1 --> A1
+    A1 --> A2
+    E2 --> A3
+    E3 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    A5 --> A6
+    A6 --> S1
+    A6 --> S2
+    A6 --> S3
+
+    classDef entradas fill:#f9d6a5,stroke:#e69500,stroke-width:1px
+    classDef salidas fill:#a5f9c6,stroke:#00e676,stroke-width:1px
+    classDef tecnico fill:#d1c4e9,stroke:#7b52c7,stroke-width:1px
+    classDef admin fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+
+    class E1,E2,E3 entradas
+    class S1,S2,S3 salidas
+    class A1,A3 tecnico
+    class A2,A4,A5,A6 admin

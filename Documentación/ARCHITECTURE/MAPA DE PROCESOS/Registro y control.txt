@@ -1,0 +1,42 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D87BF', 'primaryTextColor': '#fff', 'primaryBorderColor': '#4a6f99', 'lineColor': '#555', 'secondaryColor': '#73BF5D', 'tertiaryColor': '#F4F4F4' }}}%%
+flowchart TB
+    subgraph Entradas
+        E1["Equipos almacenados y organizados"]
+        E2["Acceso a inventario físico y Excel"]
+        E3["Datos de calibración (categoría alta)"]
+        E4["Etiquetado y clasificación clara"]
+    end
+
+    subgraph "Personal Administrativo de Logística Interna"
+        A1["Verificar etiquetado y ubicaciones de equipos (categoría media y alta)"]
+        A2["Revisar fechas de caducidad o calibración"]
+        A3["Ingresar datos en planilla Excel por sector y categoría"]
+        A4["Preparar informe de stock, uso, obsolescencia y extravíos"]
+        A5["Entregar informe a área correspondiente"]
+    end
+
+    subgraph Salidas
+        S1["Planilla Excel actualizada"]
+        S2["Informe consolidado:<br>- Equipos en uso<br>- Equipos en stock<br>- Equipos obsoletos/baja<br>- Equipos extraviados<br>- Equipos vencidos"]
+        S3["Informe validado con fecha, responsable y anexos fotográficos"]
+    end
+
+    E1 --> A1
+    E2 --> A1
+    E3 --> A2
+    E4 --> A1
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    A5 --> S1
+    A5 --> S2
+    A5 --> S3
+
+    classDef entradas fill:#f9d6a5,stroke:#e69500,stroke-width:1px
+    classDef salidas fill:#a5f9c6,stroke:#00e676,stroke-width:1px
+    classDef admin fill:#bbdefb,stroke:#1976d2,stroke-width:1px
+
+    class E1,E2,E3,E4 entradas
+    class S1,S2,S3 salidas
+    class A1,A2,A3,A4,A5 admin

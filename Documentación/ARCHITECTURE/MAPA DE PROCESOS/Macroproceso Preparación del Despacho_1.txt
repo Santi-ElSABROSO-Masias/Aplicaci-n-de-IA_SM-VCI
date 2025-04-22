@@ -1,0 +1,37 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D87BF', 'primaryTextColor': '#fff', 'primaryBorderColor': '#355a8c', 'lineColor': '#333', 'secondaryColor': '#73BF5D', 'tertiaryColor': '#F4F4F4', 'fontSize': '14px' }}}%%
+
+flowchart TB
+    subgraph Entradas
+        E1["Orden de trabajo validada"]
+        E2["Inventario actualizado"]
+    end
+
+    subgraph Preparación_del_Despacho
+        A1["Recibir solicitud de despacho"] --> A2["Revisar orden y stock"]
+        A2 -->|Stock OK| B1{"Clasificar ítem"}
+        B1 -->|Equipo/Material| B2["Generar guía de remisión"]
+        B1 -->|Herramienta/Consumible| B3{"¿>25 kg o voluminoso?"}
+        B3 -->|Sí| B2
+        B3 -->|No| B4["Generar cargo interno"]
+    end
+    
+    subgraph Controles
+        PC1["Validación de stock"]
+        PC2["Validación de documentos"]
+    end
+    
+    E1 --> A1
+    E2 --> A2
+    PC1 --> A2
+    PC2 --> B2
+    PC2 --> B4
+    
+    classDef entradas fill:#f9d6a5,stroke:#cc8500,stroke-width:2px
+    classDef proceso fill:#bbdefb,stroke:#1976d2,stroke-width:2px
+    classDef decision fill:#ffe6cc,stroke:#cc6600,stroke-width:2px
+    classDef control fill:#e6ccff,stroke:#6600cc,stroke-width:2px
+    
+    class E1,E2 entradas
+    class A1,A2,B2,B4 proceso
+    class B1,B3 decision
+    class PC1,PC2 control 
